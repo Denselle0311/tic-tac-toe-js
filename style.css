@@ -120,4 +120,87 @@
     background: #000;
     color: white;
   }
+  
+
+  .game-container {
+    display: none; /*flex*/
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    height: calc(100vh - 48px);
+    padding: 1rem;
+  }
+
+  .cell-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: fit-content;
+    width: 450px;
+  }
+
+  
+  .cell {
+    height: 150px;
+    width: 150px;
+    font-size: 100px;
+    text-align: center;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .cell.win {
+    background-color: black;
+    color: white;
+  }
+
+  .cell-container.x .cell:not(.active):hover:before {
+    content: 'X';
+    color: lightgray;
+  }
+  .cell-container.o .cell:not(.active):hover:before {
+    content: 'O';
+    color: lightgray;
+  }
+  
+  .cell.active {
+    cursor: not-allowed;
+    user-select: none;
+  }
+
+  .player-turn {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  .difficulty-display {
+    font-weight: 600;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+  }
+
+  .menu-wrapper button {
+    padding: .5em 1em;
+    font-weight: 700;
+    font-family: 'Roboto';
+    border: 1px solid grey;
+    border-bottom: 2px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 50ms ease-in;
+  }
+
+  .menu-wrapper button:hover {
+    border-color: #000;
+  }
+
+  .name {
+    font-weight: 700;
+  }
   }
