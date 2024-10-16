@@ -3,13 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="/script.js" defer></script>
     <title>Tic Tac Toe JS</title>
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <header>
+        <h1>XO</h1>
+    </header>
+    <div class="game-container">
+        <div class="player-turn"><span class="name" id="player-name">X</span>'s turn</div>
+        <main class="cell-container x">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </main>
+        <div class="menu-wrapper">
+            <span class="difficulty-wrapper">Difficulty: <span class="difficulty-display">Easy</span></span>
+            <button class="play-restart">Restart</button>
+            <button class="new-game">New Game</button>
+        </div>
+    </div>
+    <Section class="start-wrapper">
+        <h2>Choose Player Sign</h2>
+        <div class="player-sign-container">
+            <button id="x" class="sign active">X</button>
+            <button id="o" class="sign">O</button>
+        </div>
+        <div class="selection-wrapper">
+            <label for="select-difficulty">Select Difficulty:
+                <select name="select-difficulty" id="select-difficulty">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </label>
+            <button class="start-button">START GAME</button>
+        </div>
+    </Section>
+    <Section class="gameover-wrapper">
+        <h2>You Win!</h2>
+        <div class="smiley">
+            🙂
+            <!-- 😭 -->
+        </div>
+        <div class="gameover-buttons">
+            <button class="gameover-restart">Restart</button>
+            <button class="gameover-new-game">New Game</button>
+        </div>
+    </Section>
 </body>
 
 </html>
