@@ -129,7 +129,7 @@ const displayController = (()=> {
         startWrapper.style.display = 'none';
         gameContainer.style.display = 'none';
         
-        gameoverWrapper.classList.toggle('active');
+        gameoverWrapper.classList.add('active');
     };  
 
     function updateTurnDisplay() {
