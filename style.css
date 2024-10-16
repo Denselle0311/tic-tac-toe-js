@@ -8,6 +8,7 @@
   
   body {
     line-height: 1.5;
+    font-family: 'Open Sans', 'Roboto';
     -webkit-font-smoothing: antialiased;
   }
   
@@ -203,4 +204,51 @@
   .name {
     font-weight: 700;
   }
+
+  .gameover-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5vh;
+    left: calc(50vw - 240px);
+    height: calc(100vh - 48px);
+    padding: 1rem;
+    gap: 22px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  .gameover-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .gameover-wrapper h2 {
+    font-size: 6rem;
+  }
+  .smiley {
+    font-size: 10rem;
+    line-height: 13rem;
+  }
+
+  .gameover-buttons {
+    display: flex;
+    gap: 24px;
+  }
+
+  .gameover-buttons button {
+    padding: 1em 7em;
+    border: 1px solid gray;
+    border-radius: 8px;
+    transition: all .2s ease-in-out;
+  }
+
+  .gameover-buttons button:hover {
+    border-color: #000;
+  }
+
+  .gameover-buttons button:active {
+    background-color: #000;
+    color: white;
   }
